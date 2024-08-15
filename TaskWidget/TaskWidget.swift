@@ -41,40 +41,40 @@ struct TaskWidgetEntryView : View {
         VStack {
             VStack(alignment: .leading, spacing: 0) {
                 Text("Tasks")
-                .fontWeight(.bold)
+                .fontWeight(.semibold)
                 .padding(.bottom, 10)
-                VStack(alignment: .leading, spacing: 0) {
-                    if entry.lastThreeTasks.isEmpty {
+                VStack(alignment: .leading,spacing: 6, content: {
+                    if entry.lastThreeTasks.isEmpty{
                         Text("No tasks found")
                         .font(.caption)
                         .foregroundColor(.gray)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
-
-                    }else{
-                        ForEach(entry.lastThreeTasks) {
-                            task in
-                            HStack(spacing: 6){
+                    }// fin if
+                    else {
+                        ForEach(entry.lastThreeTasks) { task in
+                            HStack(spacing: 6) {
                                 Button(intent: ToggleStateIntent(id: task.id)){
-                                                               Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
-                                                                   .foregroundColor(.blue)
-                                                           }
-                                                           .buttonStyle(.plain)
+                                    Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
+                                        .foregroundColor(.blue)
+                                }
+                                .buttonStyle(.plain)
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text(task.taskTitle)
-                                        .font(.body)
+                                        .font(.body) // Use font instead of textScale
                                         .lineLimit(1)
                                         .strikethrough(task.isCompleted, pattern: .solid, color: .primary)
-                                                                Divider()
-                                                            }
+                                    Divider()
+                                }
                             }
                             if task.id != entry.lastThreeTasks.last?.id {
-                                                        Spacer(minLength: 0)
-                                                    }
-
+                                Spacer(minLength: 0)
+                            }
                         }
-                    }// FIn else
-                }        // VSTAck de tareas
+                    }// fin else
+                })// fin Vstack
+                
             }//Termina Principal
+            .containerBackground(.fill.tertiary,for: .widget)
             
         }
     }
