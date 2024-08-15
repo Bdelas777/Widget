@@ -13,7 +13,6 @@ struct Provider: TimelineProvider {
             TaskEntry(lastThreeTasks: Array(TaskDataModel.shared.tasks.prefix(3)))
         }
 
-
     func getSnapshot(in context: Context, completion: @escaping (TaskEntry) -> ()) {
             let entry = TaskEntry(lastThreeTasks: Array(TaskDataModel.shared.tasks.prefix(3)))
             completion(entry)
@@ -55,8 +54,11 @@ struct TaskWidgetEntryView : View {
                         ForEach(entry.lastThreeTasks) {
                             task in
                             HStack(spacing: 6){
-                                Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
-                                    .foregroundColor(.blue)
+                                Button(intent: ToggleStateIntent(id: task.id)){
+                                                               Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
+                                                                   .foregroundColor(.blue)
+                                                           }
+                                                           .buttonStyle(.plain)
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text(task.taskTitle)
                                         .font(.body)

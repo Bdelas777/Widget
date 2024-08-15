@@ -26,6 +26,7 @@ struct ToggleStateIntent: AppIntent {
             $0.id == id
         }){
             TaskDataModel.shared.tasks[index].isCompleted.toggle()
+            print("Updated")
         }
         return .result()
     }
