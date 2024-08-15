@@ -17,6 +17,10 @@
 		FB8DA70A2C6D73BA001CFAA5 /* TaskWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8DA7092C6D73BA001CFAA5 /* TaskWidget.swift */; };
 		FB8DA70C2C6D73BB001CFAA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8DA70B2C6D73BB001CFAA5 /* Assets.xcassets */; };
 		FB8DA7102C6D73BB001CFAA5 /* TaskWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FB8DA7002C6D73B9001CFAA5 /* TaskWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FBDBD1452C6D8995003B5AE6 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDBD1442C6D8995003B5AE6 /* TaskModel.swift */; };
+		FBDBD1462C6D8995003B5AE6 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDBD1442C6D8995003B5AE6 /* TaskModel.swift */; };
+		FBE1949B2C6D91940082A8B6 /* ToggleStateIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1949A2C6D91940082A8B6 /* ToggleStateIntent.swift */; };
+		FBE1949C2C6D91940082A8B6 /* ToggleStateIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1949A2C6D91940082A8B6 /* ToggleStateIntent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,8 @@
 		FB8DA7092C6D73BA001CFAA5 /* TaskWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskWidget.swift; sourceTree = "<group>"; };
 		FB8DA70B2C6D73BB001CFAA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB8DA70D2C6D73BB001CFAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBDBD1442C6D8995003B5AE6 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		FBE1949A2C6D91940082A8B6 /* ToggleStateIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStateIntent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 				FB8DA6F02C6D71A0001CFAA5 /* ContentView.swift */,
 				FB8DA6F22C6D71A2001CFAA5 /* Assets.xcassets */,
 				FB8DA6F42C6D71A2001CFAA5 /* Preview Content */,
+				FBDBD1442C6D8995003B5AE6 /* TaskModel.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -132,6 +139,7 @@
 				FB8DA7092C6D73BA001CFAA5 /* TaskWidget.swift */,
 				FB8DA70B2C6D73BB001CFAA5 /* Assets.xcassets */,
 				FB8DA70D2C6D73BB001CFAA5 /* Info.plist */,
+				FBE1949A2C6D91940082A8B6 /* ToggleStateIntent.swift */,
 			);
 			path = TaskWidget;
 			sourceTree = "<group>";
@@ -237,8 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBDBD1452C6D8995003B5AE6 /* TaskModel.swift in Sources */,
 				FB8DA6F12C6D71A0001CFAA5 /* ContentView.swift in Sources */,
 				FB8DA6EF2C6D71A0001CFAA5 /* WidgetApp.swift in Sources */,
+				FBE1949B2C6D91940082A8B6 /* ToggleStateIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,8 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBDBD1462C6D8995003B5AE6 /* TaskModel.swift in Sources */,
 				FB8DA70A2C6D73BA001CFAA5 /* TaskWidget.swift in Sources */,
 				FB8DA7082C6D73BA001CFAA5 /* TaskWidgetBundle.swift in Sources */,
+				FBE1949C2C6D91940082A8B6 /* ToggleStateIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
